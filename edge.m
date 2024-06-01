@@ -1,0 +1,10 @@
+clc;clear;close all;
+input_image=imread('1649570210_B1mM2.jpg');
+canny_image=edge(rgb2gray(input_image),'canny');
+sobel_image=edge(rgb2gray(input_image),'sobel');
+prewitt_image=edge(rgb2gray(input_image),'prewitt');
+figure;
+subplot(2,2,1),imshow(input_image),title('orginal image');
+subplot(2,2,2),imshow(canny_image),title('canny');
+subplot(2,2,3),imshow(sobel_image),title('sobel');
+subplot(2,2,4),imshow(prewitt_image),title('prewitt');
